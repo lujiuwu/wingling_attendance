@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= process.env.VUE_APP_TITLE %>
+  </title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+  <style>
+    html,
+    body,
+    #app {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      scrollbar-width: none;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script>
+    // 检查浏览器是否支持 addEventListener 方法
+    if ('addEventListener' in document) {
+      // 当 DOMContentLoaded 事件发生时，通过 FastClick.attach 方法解决移动端设备上的 300ms 延迟问题
+      document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    // 检查浏览器是否支持 Promise 对象，如果不支持，则动态加载 es6-promise 库的代码
+    if (!window.Promise) {
+      document.writeln('<script src="https://cdn.bootcdn.net/ajax/libs/es6-promise/4.2.8/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+    }
+  </script>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't
+        work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

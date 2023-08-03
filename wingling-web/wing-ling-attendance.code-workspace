@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../wing-ling-attendance"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "翼灵物联网工作室",
+		"vue3snippets.enable-compile-vue-file-on-did-save-code": true
+	}
+}

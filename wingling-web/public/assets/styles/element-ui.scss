@@ -1,0 +1,284 @@
+/* TimePicker 和 DatePicker样式 */
+.el-picker-panel {
+    width: 303px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.el-date-picker__header {
+    padding: 10px;
+    border-bottom: 1px dashed #138FB1;
+}
+
+.el-picker-panel .el-date-table th {
+    border-bottom: 1px solid #138FB1;
+}
+
+.el-picker-panel__icon-btn,
+.el-date-picker__header-label {
+    color: #138FB1 !important;
+}
+
+.el-date-picker .el-picker-panel__content {
+    width: 270px;
+}
+
+.el-date-table td.today span {
+    color: #138FB1;
+}
+
+.el-date-table td.current:not(.disabled) span {
+    background-color: #138FB1;
+}
+
+.el-date-table td:hover {
+    color: #138FB1 !important;
+}
+
+.el-time-panel__content {
+    background-color: #fff;
+}
+
+.el-time-spinner__item {
+    color: #081926
+}
+
+.el-time-spinner__item:hover:not(.disabled):not(.active) {
+    background-color: #138FB1;
+}
+
+.el-time-spinner__item.active:not(.disabled) {
+    border-top: 1px dashed #138FB1;
+    border-bottom: 1px dashed #138FB1;
+    color: #138FB1;
+}
+
+.el-time-spinner__item.active:not(.disabled):hover {
+    background-color: #138FB1;
+    color: white
+}
+
+.el-time-panel__footer {
+    border-top: 1px dashed #138FB1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.el-time-panel__btn.cancel {
+    color: #138FB1;
+}
+
+.el-time-panel__btn.confirm {
+    color: #138FB1;
+}
+
+.el-scrollbar__bar.is-vertical {
+    width: 0px;
+}
+
+.el-scrollbar__thumb {
+    display: none !important;
+}
+
+.el-time-range-picker__body {
+    border: 1px dashed #138FB1;
+    border-radius: 5px;
+}
+
+.el-time-range-picker__header {
+    color: #138FB1;
+}
+
+.el-range-input {
+    width: 100% !important;
+}
+
+.el-range-separator {
+    width: 10% !important;
+}
+
+/* Calendar样式修改 */
+.el-calendar {
+    width: 100%;
+
+    .el-calendar__header {
+        border-bottom: 1px dashed #C0C4D1;
+
+        .el-calendar__button-group {
+            .el-button-group {
+                display: flex;
+                align-items: center;
+
+                .el-button {
+                    margin-left: 5px !important;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                    border-radius: 5px;
+                    border: none;
+                    font-size: 14px;
+                    cursor: none;
+                    transition: all 0.1s ease-in-out;
+
+                    &:active {
+                        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+                        font-size: 12px;
+                        color: #fff;
+                        font-weight: bolder;
+                        background-color: #3DD598;
+                    }
+                }
+            }
+        }
+    }
+
+    .el-calendar__body {
+        padding: 0;
+
+        td {
+            vertical-align: middle !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .el-calendar-table {
+            thead {
+                th {
+                    padding: 5px;
+                    font-size: 14px;
+                    box-sizing: border-box;
+                    font-weight: bolder;
+                    color: #9CB2CD;
+                }
+            }
+
+            tr td:first-child {
+                border: none;
+            }
+
+            tr:first-child td {
+                border: none;
+            }
+
+            .el-calendar-table__row {
+                td {
+                    border: none;
+                }
+            }
+
+            &:not(.is-range) {
+                color: rgba(17, 169, 131, 0.6);
+            }
+
+            tr {
+                display: flex !important;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .el-calendar-day {
+                display: flex;
+                align-items: center;
+                padding: 0px;
+                justify-content: center;
+                font: 14px 'BConsolas';
+                background-color: rgb(255, 255, 255);
+                height: 50px;
+                width: 50px;
+
+                p {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.el-calendar-table td.is-selected {
+    background-color: white !important;
+}
+
+.el-calendar-table {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+
+    thead {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        th {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    tbody {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 提示框美化 */
+.el-message-box {
+    /* 为提示框添加背景色和边框 */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+
+    /* 为标题添加样式 */
+    .el-message-box__title {
+        font-size: 20px;
+        font-weight: bolder;
+        color: #138FB1;
+        margin-bottom: 10px;
+    }
+
+    .el-message-box__headerbtn {
+        cursor: default!important;
+    }
+
+    /* 为内容添加样式 */
+    .el-message-box__content {
+        font-size: 18px;
+        color: #808080;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+
+    /* 为按钮添加样式 */
+    .el-button {
+        border: none;
+        margin-right: 10px;
+        background-color: #fff;
+        color: #808080;
+        border-radius: 4px;
+        padding: 8px 16px;
+        font-weight: bolder;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    /* 鼠标悬停时，缩放按钮 */
+    .el-button:hover {
+        transform: scale(1.1);
+    }
+
+    /* 在移动设备上，缩小提示框的宽度 */
+    @media screen and (max-width: 500px) {
+        width: 330px;
+    }
+}
+
+.el-notification_right {
+    z-index: 9999 !important;
+}
